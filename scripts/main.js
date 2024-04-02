@@ -72,3 +72,16 @@ const departments = {
 }
 
 console.log(departments);
+
+// Opdracht 1a: Log het aantal medewerkers van de sales-afdeling in
+// de console, in het volgende format: "De afdeling Sales
+// heeft [x] medewerkers."
+console.log("De afdeling Sales heeft " + departments.sales.numberOfEmployees + " medewerkers.");
+
+// Opdracht 1b:
+// Marketing is een leuke afdeling om te werken. [beschrijving]."
+console.log("Marketing is een leuke afdeling om te werken. " + departments.marketing.description);
+
+// Opdracht 1c:
+// "De afdeling Customer Service heeft [aantal] medewerkers"
+console.log("De afdeling Costumer Service heeft " + )
