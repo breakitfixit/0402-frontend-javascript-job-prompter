@@ -149,8 +149,13 @@ if (departmentInput === "marketing") {
 
     let jobInput = prompt(jobOptions);
     console.log(jobInput);
+
+    const choosenJob = departments.marketing.jobs[jobIndex];
+    console.log("Je koos " + choosenJob.title + ". Een uitdagende rol! " + choosenJob.description);
+
+    let jobDescription = prompt(choosenJob);
+    console.log(jobDescription);
+
+
 }
-
-
-
 
