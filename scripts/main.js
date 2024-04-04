@@ -141,15 +141,16 @@ const departmentInput = prompt('Over welke afdeling wil je meer informatie? ' +
     'Kies uit: [marketing / sales / customer-service]');
 
 if (departmentInput === "marketing") {
-    let jobInput = prompt("Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n",
-        jobInput += "0: " + departments.marketing.jobs[0].title + "\n";
-    jobInput += "1: " + departments.marketing.jobs[1].title + "\n";
-    jobInput += "2: " + departments.marketing.jobs[2].title + "\n";
-    jobInput += "3: " + departments.marketing.jobs[3].title;
+    let jobOptions = "Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n";
+    jobOptions += "0: " + departments.marketing.jobs[0].title + "\n";
+    jobOptions += "1: " + departments.marketing.jobs[1].title + "\n";
+    jobOptions += "2: " + departments.marketing.jobs[2].title + "\n";
+    jobOptions += "3: " + departments.marketing.jobs[3].title;
+
+    let jobInput = prompt(jobOptions);
+    console.log(jobInput);
 }
-;
 
 
-console.log(userInput);
 
 
