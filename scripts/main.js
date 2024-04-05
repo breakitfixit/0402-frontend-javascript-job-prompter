@@ -73,6 +73,7 @@ const departments = {
 
 console.log(departments);
 
+
 /*Opdracht 1 - Gegevens aanspreken*/
 // Opdracht 1a: Log het aantal medewerkers van de sales-afdeling in
 // de console, in het volgende format: "De afdeling Sales
@@ -85,7 +86,7 @@ console.log("Marketing is een leuke afdeling om te werken. " + departments.marke
 
 // Opdracht 1c:
 // "De afdeling Customer Service heeft [aantal] medewerkers"
-console.log("De afdeling Costumer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
+console.log("De afdeling Customer Service heeft " + departments["customer-service"].numberOfEmployees + " medewerkers");
 
 //opdracht 1d:
 console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. " + departments.sales.description);
@@ -137,6 +138,7 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 //     2: [functietitel marketing 2],
 //     3: [functietitel marketing 3]
 
+/*Opdracht 3a:*/
 const departmentInput = prompt('Over welke afdeling wil je meer informatie? ' +
     'Kies uit: [marketing / sales / customer-service]');
 
@@ -147,15 +149,21 @@ if (departmentInput === "marketing") {
     jobOptions += "2: " + departments.marketing.jobs[2].title + "\n";
     jobOptions += "3: " + departments.marketing.jobs[3].title;
 
-    let jobInput = prompt(jobOptions);
+    let jobInput = prompt(jobOptions);/*Opdracht 3b:*/
+    let jobIndex = parseInt(jobInput); /*zet de string om naar een getal*/
     console.log(jobInput);
 
-    const choosenJob = departments.marketing.jobs[jobIndex];
-    console.log("Je koos " + choosenJob.title + ". Een uitdagende rol! " + choosenJob.description);
+    /*uitgezet vanwege aanpassing in 3c*/
+    // const chosenJob = departments.marketing.jobs[jobIndex];
+    // console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
 
-    let jobDescription = prompt(choosenJob);
-    console.log(jobDescription);
-
-
+    /*Opdracht 3c*/
+    // Controleer of de input geldig is
+    if (isNaN(jobIndex) || jobIndex < 0 || jobIndex > 3) {
+        /*ongeldige invoer bericht igv: invoer = geen nummer (NaN) || kleiner dan 0 || niet groter dan 3*/
+        console.log("Ongeldige keuze. Voer een getal tussen 0 en 3 in.");
+    } else {
+        const chosenJob = departments.marketing.jobs[jobIndex];
+        console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
+    }
 }
-
