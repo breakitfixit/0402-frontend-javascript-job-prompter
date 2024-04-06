@@ -137,33 +137,85 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 //     1: [functietitel marketing 1],
 //     2: [functietitel marketing 2],
 //     3: [functietitel marketing 3]
+//
+// /*Opdracht 3a:*/
+// const departmentInput = prompt('Over welke afdeling wil je meer informatie? ' +
+//     'Kies uit: [marketing / sales / customer-service]');
+//
+// if (departmentInput === "marketing") {
+//     let jobOptions = "Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n";
+//     jobOptions += "0: " + departments.marketing.jobs[0].title + "\n";
+//     jobOptions += "1: " + departments.marketing.jobs[1].title + "\n";
+//     jobOptions += "2: " + departments.marketing.jobs[2].title + "\n";
+//     jobOptions += "3: " + departments.marketing.jobs[3].title;
+//
+//     let jobInput = prompt(jobOptions);/*Opdracht 3b:*/
+//     let jobIndex = parseInt(jobInput); /*zet de string om naar een getal*/
+//     console.log(jobInput);
+//
+//     /*uitgezet vanwege aanpassing in 3c*/
+//     // const chosenJob = departments.marketing.jobs[jobIndex];
+//     // console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
+//
+//     /*Opdracht 3c*/
+//     // Controleer of de input geldig is
+//     if (isNaN(jobIndex) || jobIndex < 0 || jobIndex > 3) {
+//         /*ongeldige invoer bericht igv: invoer = geen nummer (NaN) || kleiner dan 0 || niet groter dan 3*/
+//         console.log("Ongeldige keuze. Voer een getal tussen 0 en 3 in.");
+//     } else {
+//         const chosenJob = departments.marketing.jobs[jobIndex];
+//         console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
+//     }
+// }
 
-/*Opdracht 3a:*/
-const departmentInput = prompt('Over welke afdeling wil je meer informatie? ' +
+/*Opdracht 4*/
+/*input uit opdracht 2c gekopieerd*/
+
+// - Log de afdeling-beschrijving,
+// - van de ingevoerde afdeling,
+// - uit de eerste prompt,
+// - in de console,
+// - in het volgende format: "[afdeling-naam] is een leuke afdeling om te werken. Er werken op dit moment [aantal] medewerkers."
+// **** Tip: gebruik hiervoor de blokhaak notatie.
+//      check *link* voor voorbeeld -> van het gebruik van een variabele als object-key.
+//      (link= https://bobbyhadz.com/blog/javascript-get-object-value-by-variable-key)
+
+/*Opdracht 4a*/
+// const userInput = prompt('Over welke afdeling wil je meer informatie? ' +
+//     'Kies uit: [marketing / sales / customer-service]');
+// console.log(userInput);
+//
+// if (departments[userInput]) {
+//     const afdeling = departments[userInput];
+//     console.log(userInput + " is een leuke afdeling om te werken. Er werken op dit moment " + afdeling.numberOfEmployees + " medewerkers.")
+// //     userInput geeft afdeling weer / oftewel variabele 'afdeling' = userInput
+// //     maakt het volgende mogelijk afdeling.numberOfEmployees = departments.sales/marketing/customer-service.numberOfEmployees
+// } else {
+//     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
+// }
+
+/*Opdracht 4b*/
+
+// Je koos [afdeling]. Over welke functie wil je meer weten?
+// Voer een getal tussen 0 en 3 in.
+// [0: [functietitel afdeling x], 1: [functietitel afdeling x], 2: [functietitel afdeling x], 3: [functietitel afdeling x]
+
+const userInput = prompt('Over welke afdeling wil je meer informatie? ' +
     'Kies uit: [marketing / sales / customer-service]');
 
-if (departmentInput === "marketing") {
-    let jobOptions = "Je koos marketing. Over welke functie wil je meer weten? Voer een getal tussen 0 en 3 in.\n";
-    jobOptions += "0: " + departments.marketing.jobs[0].title + "\n";
-    jobOptions += "1: " + departments.marketing.jobs[1].title + "\n";
-    jobOptions += "2: " + departments.marketing.jobs[2].title + "\n";
-    jobOptions += "3: " + departments.marketing.jobs[3].title;
 
-    let jobInput = prompt(jobOptions);/*Opdracht 3b:*/
-    let jobIndex = parseInt(jobInput); /*zet de string om naar een getal*/
-    console.log(jobInput);
+if (departments[userInput]) {
+    const afdeling = departments[userInput];
+    let jobOptions = "Je koos " + userInput + ". Over welke functie wil je meer weten?\n";
+    jobOptions += "0: " + afdeling.jobs[0].title + "\n";
+    jobOptions += "1: " + afdeling.jobs[1].title + "\n";
+    jobOptions += "2: " + afdeling.jobs[2].title + "\n";
+    jobOptions += "3: " + afdeling.jobs[3].title;
 
-    /*uitgezet vanwege aanpassing in 3c*/
-    // const chosenJob = departments.marketing.jobs[jobIndex];
-    // console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
+    const jobKeuze = prompt(jobOptions);
+    console.log(jobKeuze);
 
-    /*Opdracht 3c*/
-    // Controleer of de input geldig is
-    if (isNaN(jobIndex) || jobIndex < 0 || jobIndex > 3) {
-        /*ongeldige invoer bericht igv: invoer = geen nummer (NaN) || kleiner dan 0 || niet groter dan 3*/
-        console.log("Ongeldige keuze. Voer een getal tussen 0 en 3 in.");
-    } else {
-        const chosenJob = departments.marketing.jobs[jobIndex];
-        console.log("Je koos " + chosenJob.title + ". Een uitdagende rol! " + chosenJob.description);
-    }
+} else {
+    console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
+
