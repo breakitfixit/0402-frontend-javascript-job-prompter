@@ -196,13 +196,15 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 
 /*Opdracht 4b*/
 
+/*prompt uit opdracht 3 omschrijven.*/
+
 // Je koos [afdeling]. Over welke functie wil je meer weten?
 // Voer een getal tussen 0 en 3 in.
 // [0: [functietitel afdeling x], 1: [functietitel afdeling x], 2: [functietitel afdeling x], 3: [functietitel afdeling x]
 
+
 const userInput = prompt('Over welke afdeling wil je meer informatie? ' +
     'Kies uit: [marketing / sales / customer-service]');
-
 
 if (departments[userInput]) {
     const afdeling = departments[userInput];
@@ -218,4 +220,13 @@ if (departments[userInput]) {
 } else {
     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 }
+
+/*Opdracht 4c: */
+//  tijdens de uitwerking van opdracht 4b heb ik 4c al behandeld.
+
+/*Opdracht 5 - bonus!*/
+// bonus-opdracht v/ les 5 ga ik pas maken als:
+// - idee-fase is ingeleverd
+// - huiswerkopdracht les 4 heb afgerond
+// - Hoofdstuk 3 lezen - ter voorbereiding les 6.
 
