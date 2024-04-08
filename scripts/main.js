@@ -194,7 +194,7 @@ console.log("Sales is een uitdagende afdeling om te werken als Verkoopmanager. "
 //     console.error("Ongeldige keuze. Probeer het opnieuw door de pagina te verversen.");
 // }
 
-/*Opdracht 4b*/
+/*Opdracht 4b + 4b*/
 
 /*prompt uit opdracht 3 omschrijven.*/
 
@@ -225,8 +225,4 @@ if (departments[userInput]) {
 //  tijdens de uitwerking van opdracht 4b heb ik 4c al behandeld.
 
 /*Opdracht 5 - bonus!*/
-// bonus-opdracht v/ les 5 ga ik pas maken als:
-// - idee-fase is ingeleverd
-// - huiswerkopdracht les 4 heb afgerond
-// - Hoofdstuk 3 lezen - ter voorbereiding les 6.
 
